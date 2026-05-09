@@ -1,6 +1,6 @@
 {
   "name": "@node-flow-elements/core",
-  "version": "0.1.0-next.1",
+  "version": "0.1.0",
   "repository": {
     "url": "https://github.com/JulianCataldo/node-flow-elements",
     "directory": "packages/core"
