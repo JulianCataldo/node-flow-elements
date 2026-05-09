@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "audit": "pnpm audit --prod",
+    "audit": "pnpm audit signatures",
     "audit:all": "pnpm audit",
     "audit:signatures": "pnpm audit signatures",
     "build": "node --run build:demo",
@@ -80,7 +80,8 @@
     "overrides": {
       "lit": "^3.3.2",
       "signal-polyfill": "0.2.2",
-      "is-core-module": "npm:@nolyfill/is-core-module@^1"
+      "is-core-module": "npm:@nolyfill/is-core-module@^1",
+      "fast-uri": ">=3.1.1"
     }
   }
 }

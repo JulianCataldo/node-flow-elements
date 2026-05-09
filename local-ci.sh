@@ -4,9 +4,8 @@ set -euo pipefail
 echo "=== frozen install ==="
 pnpm install --frozen-lockfile
 
-# NOTE: Disabled for now
-# echo "=== audit ==="
-# node --run audit
+echo "=== audit ==="
+node --run audit
 
 echo "=== clean ==="
 node --run clean

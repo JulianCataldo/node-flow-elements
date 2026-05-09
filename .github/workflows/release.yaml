@@ -94,6 +94,9 @@ jobs:
       - name: Tests - units
         run: node --run test:unit
 
+      - name: Tests - types
+        run: node --run test:types
+
       - name: Cache Playwright browsers
         uses: actions/cache@v4
         with:
