@@ -1,42 +1,45 @@
 {
   "name": "@node-flow-elements/root",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "url": "https://github.com/JulianCataldo/node-flow-elements"
+  },
   "type": "module",
   "scripts": {
     "audit": "pnpm audit signatures",
     "audit:all": "pnpm audit",
     "audit:signatures": "pnpm audit signatures",
     "build": "node --run build:demo",
-    "build:libs": "turbo build --filter=@node-flow-elements/core --filter=@node-flow-elements/webawesome",
     "build:demo": "turbo build --filter=@node-flow-elements/nfe-demo",
-    "clean": "turbo clean",
+    "build:libs": "turbo build --filter=@node-flow-elements/core --filter=@node-flow-elements/webawesome",
     "ci:local": "./local-ci.sh",
+    "clean": "turbo clean",
     "dev": "node --run dev:demo",
-    "dev:libs": "turbo dev --filter=@node-flow-elements/core --filter=@node-flow-elements/webawesome",
     "dev:demo": "pnpm --filter @node-flow-elements/nfe-demo dev",
-    "wea:generate": "turbo run wea-generate --filter=@node-flow-elements/core --filter=@node-flow-elements/webawesome",
+    "dev:libs": "turbo dev --filter=@node-flow-elements/core --filter=@node-flow-elements/webawesome",
     "doc:api": "typedoc --skipErrorChecking",
-    "preview": "pnpm --filter @node-flow-elements/nfe-demo preview",
-    "lint:es": "eslint --cache .",
-    "lint:es:fix": "eslint --cache --fix .",
-    "lint:style": "stylelint 'packages/**/*.css'",
-    "lint:style:fix": "stylelint --fix 'packages/**/*.css'",
-    "lint:commit": "commitlint --from=HEAD~1",
-    "sherif": "sherif",
-    "lint": "pnpm lint:es && pnpm lint:style",
-    "lint:fix": "pnpm lint:es:fix && pnpm lint:style:fix",
-    "lint:deps": "sherif",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "knip": "knip",
+    "lint": "pnpm lint:es && pnpm lint:style",
+    "lint:commit": "commitlint --from=HEAD~1",
+    "lint:deps": "sherif",
+    "lint:es": "eslint --cache .",
+    "lint:es:fix": "eslint --cache --fix .",
+    "lint:fix": "pnpm lint:es:fix && pnpm lint:style:fix",
+    "lint:style": "stylelint 'packages/**/*.css'",
+    "lint:style:fix": "stylelint --fix 'packages/**/*.css'",
     "nolyfill": "pnpm dlx nolyfill install",
+    "preview": "pnpm --filter @node-flow-elements/nfe-demo preview",
+    "release": "node --run release:ci",
+    "release:ci": "lerna publish from-package --yes",
+    "release:dry": "lerna publish from-package --dry-run --yes",
+    "sherif": "sherif",
     "test:e2e": "playwright test -c playwright.config.ts",
     "test:types": "pnpm --filter @node-flow-elements/core test:types",
     "test:unit": "pnpm --filter @node-flow-elements/core test:unit && pnpm --filter @node-flow-elements/webawesome test:unit",
-    "release": "node --run release:ci",
-    "release:ci": "lerna publish from-package --yes",
-    "release:dry": "lerna publish from-package --dry-run --yes"
+    "wea:generate": "turbo run wea-generate --filter=@node-flow-elements/core --filter=@node-flow-elements/webawesome"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -74,14 +77,14 @@
   },
   "packageManager": "pnpm@9.15.9",
   "pnpm": {
+    "overrides": {
+      "fast-uri": ">=3.1.1",
+      "is-core-module": "npm:@nolyfill/is-core-module@^1",
+      "lit": "^3.3.2",
+      "signal-polyfill": "0.2.2"
+    },
     "patchedDependencies": {
       "@lit-labs/signals": "patches/@lit-labs__signals.patch"
-    },
-    "overrides": {
-      "lit": "^3.3.2",
-      "signal-polyfill": "0.2.2",
-      "is-core-module": "npm:@nolyfill/is-core-module@^1",
-      "fast-uri": ">=3.1.1"
     }
   }
 }

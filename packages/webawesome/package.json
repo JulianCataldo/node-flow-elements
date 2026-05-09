@@ -1,6 +1,10 @@
 {
   "name": "@node-flow-elements/webawesome",
   "version": "0.1.0-next.0",
+  "repository": {
+    "url": "https://github.com/JulianCataldo/node-flow-elements",
+    "directory": "packages/webawesome"
+  },
   "type": "module",
   "exports": {
     ".": "./dist/index.js",
@@ -11,15 +15,19 @@
     "./demo-nodes/presets/default": "./dist/demo-nodes/presets/default.js",
     "./demo-nodes/presets/menu": "./dist/demo-nodes/presets/menu.js"
   },
+  "files": [
+    "dist/",
+    "!dist/test"
+  ],
   "scripts": {
-    "postinstall": "ts-patch install -s",
     "build": "tsc -p tsconfig.json",
     "postbuild": "node --run copy:css && node --run copy:dts",
     "copy:css": "cd ./src && find . -name '*.css' ! -path './themes/webawesome/*' | cpio -pdm ../dist/",
     "copy:dts": "cd src && find . -name '*.d.ts' | cpio -pdm ../dist/",
     "dev": "tsc -w -p tsconfig.json",
-    "wea:generate": "wea-generate",
-    "test:unit": "c8 --reporter=html node --test 'dist/test/**/*.test.js'"
+    "postinstall": "ts-patch install -s",
+    "test:unit": "c8 --reporter=html node --test 'dist/test/**/*.test.js'",
+    "wea:generate": "wea-generate"
   },
   "dependencies": {
     "@awesome.me/webawesome": "3.6.0",
@@ -31,6 +39,12 @@
     "clsx": "^2.1.1",
     "lit": "^3.3.2",
     "signal-utils": "0.21.1"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "jsx-forge": "0.4.0-next.1",
+    "ts-patch": "^3.3.0",
+    "web-elements-analyzer": "0.0.0"
   },
   "peerDependencies": {
     "@awesome.me/webawesome": "3.6.0",
@@ -44,17 +58,8 @@
       "optional": true
     }
   },
-  "files": [
-    "dist/"
-  ],
-  "devDependencies": {
-    "c8": "^10.1.3",
-    "jsx-forge": "0.4.0-next.1",
-    "ts-patch": "^3.3.0",
-    "web-elements-analyzer": "0.0.0"
-  },
-  "// customElements": "custom-elements.json",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "// customElements": "custom-elements.json"
 }
