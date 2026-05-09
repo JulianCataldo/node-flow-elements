@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "esnext",
     "experimentalDecorators": false,
     "useDefineForClassFields": true,
     // "experimentalDecorators": false,
     // "useDefineForClassFields": true,
-    "module": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -14,7 +14,9 @@
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    // "noEmit": true,
+    "rootDir": "packages/core/src",
+    "outDir": "dist",
 
     /* Linting */
     "strict": true,
@@ -23,15 +25,19 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
 
-    "jsx": "preserve",
-    "jsxImportSource": "@gracile-labs/jsx",
-
     // "emitDeclarationOnly": true,
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true
+    "sourceMap": true,
     // "outDir": "dist",
     // "rootDir": "./src/lib"
+
+    "types": ["node"]
   },
-  "include": ["src"]
+  "include": [
+    "packages/core/src",
+    "packages/webawesome/src",
+    "demo/src/ambient.d.ts"
+  ],
+  "exclude": ["dist", "node_modules"]
 }

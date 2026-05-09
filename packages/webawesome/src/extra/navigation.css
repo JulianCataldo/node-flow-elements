@@ -1,0 +1,46 @@
+:host {
+	display: contents;
+}
+
+.navigation-overlay {
+	position: absolute;
+	right: var(--wa-space-l);
+	bottom: var(--wa-space-l);
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin: var(--wa-space-xs);
+	font-size: 1.5rem;
+	opacity: 0;
+	transition: opacity 0.075s;
+
+	&.is-visible {
+		opacity: 1;
+		transition: opacity 0.125s;
+	}
+
+	/* TODO: */
+
+	/* .toggle-coordinates { */
+
+	/*   svg { */
+
+	/*     color: red; */
+
+	/*   } */
+
+	/* } */
+}
+
+wa-button {
+	&::part(base) {
+		min-height: initial;
+		box-shadow: var(--wa-shadow-s);
+	}
+
+	&::part(label) {
+		display: flex;
+		align-items: center;
+		padding: var(--wa-space-xs);
+	}
+}

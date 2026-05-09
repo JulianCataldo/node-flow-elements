@@ -1,7 +1,7 @@
 {
   "entryPoints": [
     //
-    "./src/lib/_typedoc.ts"
+    "./packages/core/src/_typedoc.ts"
   ],
   // "plugin": ["typedoc-plugin-markdown"]
   "out": "./public/api",

@@ -1,0 +1,52 @@
+.nf-webawesome {
+	--nf-background-color: light-dark(
+		var(--wa-color-neutral-95),
+		var(--wa-color-neutral-05)
+	);
+	--nf-background-grid-lines-color: light-dark(
+		var(--wa-color-neutral-90),
+		var(--wa-color-neutral-10)
+	);
+	--nf-background-grid-dots-color: light-dark(
+		var(--wa-color-neutral-80),
+		var(--wa-color-neutral-20)
+	);
+	--nf-background-grid-line-width: 0.5;
+	--nf-background-grid-line-spacing: 48;
+
+	/* Links */
+
+	--nf-links-grid-stroke-main-color: light-dark(
+		var(--wa-color-neutral-60),
+		var(--wa-color-neutral-40)
+	);
+	--nf-links-grid-stroke-main-pulsing-color: light-dark(
+		var(--wa-color-success-90),
+		var(--wa-color-success-10)
+	);
+	--nf-links-grid-stroke-main-overlay-color: light-dark(
+		var(--wa-color-neutral-60),
+		var(--wa-color-neutral-40)
+	);
+	--nf-links-grid-stroke-main-outline-color: light-dark(
+		color-mix(in srgb, var(--wa-color-neutral-80), transparent 80%),
+		color-mix(in srgb, var(--wa-color-neutral-20), transparent 80%)
+	);
+	--nf-links-grid-stroke-main-hover-color: light-dark(
+		var(--wa-color-danger-60),
+		var(--wa-color-danger-40)
+	);
+	--nf-selection-rectangle-background-color: light-dark(
+		color-mix(in srgb, var(--wa-color-brand-70) 28%, transparent),
+		color-mix(in srgb, var(--wa-color-brand-30) 28%, transparent)
+	);
+	--nf-selection-rectangle-border: 1px solid var(--wa-color-brand);
+
+	/* NOTE:DISABLED */
+
+	/* --nf-selection-rectangle-box-shadow: 0 0 0 1px
+    light-dark(
+      color-mix(in srgb, var(--wa-color-brand-70) 28%, transparent),
+      color-mix(in srgb, var(--wa-color-brand-30) 28%, transparent)
+    ); */
+}

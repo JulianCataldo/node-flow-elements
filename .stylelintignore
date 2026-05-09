@@ -1,0 +1,12 @@
+dist
+dist-site
+dist-ssr
+coverage
+node_modules
+packages/**/dist
+packages/**/node_modules
+.external-repos
+.gracile
+playwright-report
+test-results
+demo/public/api

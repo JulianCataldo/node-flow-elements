@@ -29,4 +29,15 @@ dist-ssr
 
 .dev*
 .old*
-public/api
+demo/public/api
+test-results
+playwright-report
+
+dist-ts
+
+coverage
+
+.turbo
+.eslintcache
+
+.local-paths.cjs

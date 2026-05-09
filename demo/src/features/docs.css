@@ -1,0 +1,155 @@
+/* @import url('@gracile/doc/src/lib/styles/document') as *;
+@import url('@gracile/doc/src/lib/shoelace/vars') as *;
+@import url('@gracile/doc/src/lib/shoelace/typography');
+@import url('@gracile/doc/src/lib/shoelace/shiki-syntax');
+@import url('@gracile/doc/src/lib/shoelace/code'); */
+@import url('@shoelace-style/shoelace/dist/themes/light.css');
+@import url('@shoelace-style/shoelace/dist/themes/dark.css');
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-size-adjust: 100%;
+}
+
+html {
+	/* @include fix-border-box;
+	@include font-smoothing; */
+}
+
+.git-only {
+	display: none;
+}
+
+body {
+	margin: 0;
+	background-color: var(--sl-color-neutral-0);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	scroll-margin-top: 2rem;
+}
+
+.main {
+	flex-grow: 1;
+	width: 60%;
+	padding: 0 4vw;
+	margin-bottom: 4rem;
+}
+
+.root {
+	display: flex;
+	justify-content: space-between;
+}
+
+.side-menu {
+	position: sticky;
+	top: 0;
+	width: fit-content;
+	height: 100dvh;
+	padding: 1vw;
+	padding-bottom: 8rem;
+	overflow-y: auto;
+
+	.title {
+		display: block;
+		margin: 1.5rem 1rem;
+		font-weight: var(--sl-font-weight-bold);
+		color: var(--sl-color-primary-800);
+
+		span {
+			font-weight: var(--sl-font-weight-light);
+		}
+	}
+
+	a {
+		color: currentcolor;
+		text-decoration: none;
+
+		&:hover {
+			color: var(--sl-color-primary-700);
+			text-decoration: underline;
+		}
+	}
+
+	li {
+		padding: 0;
+		margin: 0.1rem;
+
+		&::marker {
+			color: color-mix(
+				in srgb,
+				var(--sl-color-primary-500) 100%,
+				transparent 50%
+			);
+		}
+	}
+
+	ul {
+		padding: 0 1rem;
+		margin: 0.5rem 0;
+	}
+}
+
+.shiki {
+	max-height: 50vh;
+	padding: var(--sl-spacing-x-large);
+	margin: 0;
+	overflow: auto;
+	font-family: ui-monospace, monospace;
+	font-size: 16px;
+	border-radius: var(--sl-border-radius-large);
+
+	/*  height: 100%;height */
+
+	.file-title {
+		&::before {
+			content: '📄 • ';
+		}
+
+		display: inline-block;
+		padding: var(--sl-spacing-small);
+		margin: var(--sl-spacing-medium) 0;
+		font-family: system-ui, sans-serif;
+		background-color: var(--sl-color-neutral-50);
+		border-radius: var(--sl-border-radius-small);
+		box-shadow: var(--sl-shadow-medium);
+	}
+
+	.file-title:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.markdown-alert {
+	width: fit-content;
+
+	.markdown-alert-title {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		font-weight: var(--sl-font-weight-bold);
+
+		svg {
+			fill: currentcolor;
+		}
+	}
+
+	&.markdown-alert-caution {
+		border-color: var(--sl-color-red-100);
+
+		.markdown-alert-title {
+			color: var(--sl-color-red-600);
+		}
+	}
+
+	padding: 0.2rem 1.5rem;
+	margin: 3vw;
+	background-color: var(--sl-color-neutral-50);
+	border: 1px solid var(--sl-color-neutral-600);
+	border-radius: 1rem;
+	box-shadow: var(--sl-shadow-large);
+}

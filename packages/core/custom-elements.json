@@ -1,0 +1,320 @@
+{
+  "$schema": "https://raw.githubusercontent.com/webcomponents/custom-elements-manifest/main/schema.json",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/_typedoc.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/canvas.el-pointer-handler.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/events.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/flow-canvas-handler.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/flow-gui-handler.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/flow-link-handler.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/flow-node-handler.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/flow.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/index.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/lifecycle.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/missing-node.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/node.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/port.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/types.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/adapters/react.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/helpers/auto-layout.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/helpers/find-free-position.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/test/calculator.test.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/test/dynamic-ports.test.ts"
+    },
+    {
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/test/missing-node.test.ts"
+    },
+    {
+      "declarations": [
+        {
+          "attributes": [
+            {
+              "description": "Grid pattern style.",
+              "name": "pattern"
+            },
+            {
+              "description": "Disable adaptive coarsening of the grid when zoomed out.",
+              "name": "no-rescale"
+            }
+          ],
+          "cssParts": [],
+          "cssProperties": [
+            {
+              "name": "--nf-background-color"
+            },
+            {
+              "name": "--nf-background-grid-lines-color"
+            },
+            {
+              "name": "--nf-background-grid-line-width"
+            },
+            {
+              "name": "--nf-background-grid-line-spacing"
+            }
+          ],
+          "cssStates": [],
+          "customElement": true,
+          "events": [],
+          "kind": "class",
+          "members": [
+            {
+              "name": "slot",
+              "kind": "field",
+              "privacy": "public"
+            },
+            {
+              "name": "flow",
+              "kind": "field",
+              "privacy": "public"
+            },
+            {
+              "description": "Grid pattern style.",
+              "name": "pattern",
+              "kind": "field",
+              "privacy": "public"
+            },
+            {
+              "description": "Disable adaptive coarsening of the grid when zoomed out.",
+              "name": "noRescale",
+              "kind": "field",
+              "privacy": "public"
+            }
+          ],
+          "name": "NfBackgroundElement",
+          "slots": [],
+          "tagName": "nf-background"
+        }
+      ],
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/background.el.tsx"
+    },
+    {
+      "declarations": [
+        {
+          "attributes": [],
+          "cssParts": [],
+          "cssProperties": [],
+          "cssStates": [],
+          "customElement": true,
+          "events": [],
+          "kind": "class",
+          "members": [
+            {
+              "name": "flow",
+              "kind": "field",
+              "privacy": "public"
+            }
+          ],
+          "name": "NfCanvasElement",
+          "slots": [],
+          "tagName": "nf-interactive-canvas"
+        }
+      ],
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/canvas.el.tsx"
+    },
+    {
+      "declarations": [
+        {
+          "attributes": [],
+          "cssParts": [],
+          "cssProperties": [],
+          "cssStates": [],
+          "customElement": true,
+          "events": [],
+          "kind": "class",
+          "members": [
+            {
+              "name": "flow",
+              "kind": "field"
+            }
+          ],
+          "name": "NfFlowElement",
+          "slots": [
+            {
+              "name": "background"
+            },
+            {
+              "name": "background-interactive"
+            },
+            {
+              "name": "foreground"
+            },
+            {
+              "name": "foreground-interactive"
+            }
+          ],
+          "tagName": "nf-flow"
+        }
+      ],
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/flow.el.tsx"
+    },
+    {
+      "declarations": [
+        {
+          "attributes": [],
+          "cssParts": [],
+          "cssProperties": [],
+          "cssStates": [],
+          "customElement": true,
+          "events": [],
+          "kind": "class",
+          "members": [],
+          "name": "NfHandleElement",
+          "slots": [],
+          "tagName": "nf-handle"
+        }
+      ],
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/handle.el.tsx"
+    },
+    {
+      "declarations": [
+        {
+          "attributes": [],
+          "cssParts": [],
+          "cssProperties": [],
+          "cssStates": [],
+          "customElement": true,
+          "events": [],
+          "kind": "class",
+          "members": [
+            {
+              "name": "slot",
+              "kind": "field",
+              "privacy": "public"
+            },
+            {
+              "name": "flow",
+              "kind": "field",
+              "privacy": "public"
+            }
+          ],
+          "name": "NfLinksElement",
+          "slots": [],
+          "tagName": "nf-links"
+        }
+      ],
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/links.el.tsx"
+    },
+    {
+      "declarations": [
+        {
+          "attributes": [],
+          "cssParts": [],
+          "cssProperties": [],
+          "cssStates": [],
+          "customElement": true,
+          "events": [],
+          "kind": "class",
+          "members": [
+            {
+              "name": "node",
+              "kind": "field",
+              "privacy": "public"
+            }
+          ],
+          "name": "NfNodeElement",
+          "slots": [],
+          "tagName": "nf-node"
+        }
+      ],
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/node.el.tsx"
+    },
+    {
+      "declarations": [
+        {
+          "attributes": [
+            {
+              "name": "cableoffset"
+            }
+          ],
+          "cssParts": [],
+          "cssProperties": [],
+          "cssStates": [],
+          "customElement": true,
+          "events": [],
+          "kind": "class",
+          "members": [
+            {
+              "name": "port",
+              "kind": "field",
+              "privacy": "public"
+            },
+            {
+              "name": "cableOffset",
+              "kind": "field",
+              "privacy": "public"
+            }
+          ],
+          "name": "NfPortElement",
+          "slots": [],
+          "tagName": "nf-port"
+        }
+      ],
+      "kind": "javascript-module",
+      "path": "/Volumes/n_1024a-Projects/Repositories/packages/@nfe/nfe/packages/core/src/port.el.tsx"
+    }
+  ],
+  "schemaVersion": "1"
+}

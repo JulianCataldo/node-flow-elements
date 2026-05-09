@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
+  "version": "independent",
+  "npmClient": "pnpm",
+  "conventionalCommits": true,
+  "changelogPreset": "conventional-changelog-conventionalcommits",
+  "exact": true,
+  "command": {
+    "publish": {
+      "cleanupTempFiles": true,
+      "stripPackageKeys": ["devDependencies", "scripts"]
+    }
+  },
+  "ignoreChanges": [
+    "*.md",
+    "**/test/**",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "turbo.json",
+    "eslint.config.js",
+    "tsconfig.json",
+    "typedoc*.json*",
+    "local-ci.sh",
+    "scripts/**"
+  ],
+  "packages": ["./packages/core", "./packages/webawesome"]
+}

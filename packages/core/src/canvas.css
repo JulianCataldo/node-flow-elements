@@ -1,0 +1,58 @@
+.wrapper {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	/* TODO: Namespace cursors */
+
+	cursor: var(--cursor-grab, grab);
+
+	/* HACK: Safari */
+	/* stylelint-disable-next-line property-no-vendor-prefix */
+	-webkit-user-select: none;
+	user-select: none;
+
+	&.is-dragging {
+		cursor: var(--cursor-grabbing, grabbing);
+	}
+
+	&.is-connecting-port {
+		cursor: var(--cursor-connecting, crosshair);
+	}
+
+	&.is-selecting-nodes {
+		cursor: crosshair;
+	}
+
+	&.is-dragging-node {
+		/* FIXME: */
+		cursor: var(--cursor-move, move);
+	}
+}
+
+.selection-rectangle {
+	position: absolute;
+	pointer-events: none;
+	background: var(
+		--nf-selection-rectangle-background-color,
+		rgb(152 152 152 / 46%)
+	);
+	border: var(--nf-selection-rectangle-border, 1px solid rgb(46 46 46 / 77.6%));
+
+	/* NOTE: Disabled */
+
+	/* box-shadow: var(
+    --nf-selection-rectangle-box-shadow,
+    0 0 0 3px rgb(46 46 46 / 77.6%)
+  ); */
+}
+
+::slotted(.node) {
+	position: absolute;
+
+	/* NOTE: Prevents seams from wrapper `grab` cursor. */
+	cursor: var(--cursor-default, default);
+	transform: translate(var(--dx), var(--dy));
+}

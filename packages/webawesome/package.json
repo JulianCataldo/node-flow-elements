@@ -1,0 +1,60 @@
+{
+  "name": "@node-flow-elements/webawesome",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./web-elements": "./dist/_ambient/web-elements.d.ts",
+    "./theme.css": "./dist/theme.css",
+    "./demo-nodes": "./dist/demo-nodes/index.js",
+    "./demo-nodes/presets/kitchen-sink": "./dist/demo-nodes/presets/kitchen-sink.js",
+    "./demo-nodes/presets/default": "./dist/demo-nodes/presets/default.js",
+    "./demo-nodes/presets/menu": "./dist/demo-nodes/presets/menu.js"
+  },
+  "scripts": {
+    "postinstall": "ts-patch install -s",
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "node --run copy:css && node --run copy:dts",
+    "copy:css": "cd ./src && find . -name '*.css' ! -path './themes/webawesome/*' | cpio -pdm ../dist/",
+    "copy:dts": "cd src && find . -name '*.d.ts' | cpio -pdm ../dist/",
+    "dev": "tsc -w -p tsconfig.json",
+    "wea:generate": "wea-generate",
+    "test:unit": "c8 --reporter=html node --test 'dist/test/**/*.test.js'"
+  },
+  "dependencies": {
+    "@awesome.me/webawesome": "3.6.0",
+    "@jsfe/webawesome": "0.5.0-next.1",
+    "@lit-labs/signals": "catalog:",
+    "@lit/context": "^1.1.6",
+    "@node-flow-elements/core": "workspace:*",
+    "arktype": "^2.2.0",
+    "clsx": "^2.1.1",
+    "lit": "^3.3.2",
+    "signal-utils": "0.21.1"
+  },
+  "peerDependencies": {
+    "@awesome.me/webawesome": "3.6.0",
+    "@jsfe/webawesome": "0.5.0-next.1"
+  },
+  "peerDependenciesMeta": {
+    "@awesome.me/webawesome": {
+      "optional": true
+    },
+    "@jsfe/webawesome": {
+      "optional": true
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "jsx-forge": "0.4.0-next.1",
+    "ts-patch": "^3.3.0",
+    "web-elements-analyzer": "0.0.0"
+  },
+  "// customElements": "custom-elements.json",
+  "publishConfig": {
+    "access": "public"
+  }
+}

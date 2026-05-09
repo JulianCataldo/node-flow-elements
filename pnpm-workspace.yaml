@@ -1,0 +1,7 @@
+packages:
+  - ./packages/core
+  - ./packages/webawesome
+  - ./demo
+
+catalog:
+  '@lit-labs/signals': '0.2.0'

@@ -1,0 +1,93 @@
+:host {
+	display: contents;
+}
+
+.is-hovering {
+	background: var(--wa-color-danger);
+}
+
+.is-dragging {
+	background: var(--wa-color-success);
+}
+
+.is-dragged-over {
+	background: light-dark(var(--wa-color-cyan-60), var(--wa-color-cyan-40));
+}
+
+.is-hidden {
+	visibility: hidden;
+}
+
+nf-port {
+	padding: 0.5rem;
+}
+
+.port {
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 0.9rem;
+	height: 0.9rem;
+	font-size: 0.7rem;
+	color: light-dark(var(--wa-color-neutral-60), var(--wa-color-neutral-40));
+	background-color: light-dark(
+		var(--wa-color-neutral-80),
+		var(--wa-color-neutral-20)
+	);
+	border: 2px solid;
+	border-color: var(--wa-color-neutral-50);
+	border-radius: 3px;
+	transition:
+		background-color 250ms,
+		border-color 750ms;
+
+	&.is-connected {
+		color: light-dark(var(--wa-color-brand-50), var(--wa-color-brand-50));
+		background-color: light-dark(
+			var(--wa-color-brand-90),
+			var(--wa-color-brand-10)
+		);
+		border-color: light-dark(
+			var(--wa-color-brand-70),
+			var(--wa-color-brand-40)
+		);
+	}
+
+	&.is-pulsing {
+		background-color: light-dark(
+			var(--wa-color-success-60),
+			var(--wa-color-success-40)
+		);
+		border-color: light-dark(
+			var(--wa-color-success-80),
+			var(--wa-color-success-20)
+		);
+		transition:
+			background-color 5ms,
+			border-color 50ms;
+	}
+
+	&:hover {
+		color: light-dark(var(--wa-color-brand-70), var(--wa-color-brand-60));
+		background-color: light-dark(
+			var(--wa-color-brand-95),
+			var(--wa-color-brand-30)
+		);
+		box-shadow: var(--wa-shadow-s), var(--wa-shadow-l);
+	}
+}
+
+.port.inlet {
+	transform: translateX(calc(0.7rem / 2));
+}
+
+.port.outlet {
+	transform: translateX(calc(-0.7rem / 2));
+}
+
+.port-type-tooltip-content {
+	display: flex;
+	gap: var(--wa-space-2xs);
+	align-items: center;
+}

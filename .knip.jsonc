@@ -1,0 +1,83 @@
+{
+	"$schema": "https://unpkg.com/knip@5/schema.json",
+	"ignore": [
+		".external-repos/**",
+		".turbo/**",
+		"node_modules/**",
+		"**/dist/**",
+		"coverage/**",
+		"playwright-report/**",
+		"test-results/**",
+		"public/**",
+		"eslint.config.js",
+		"packages/core/src/_ambient/**",
+		"packages/webawesome/src/_ambient/**",
+		"packages/core/src/src/web-elements.d.ts",
+		"packages/core/types/web-elements.exts.d.ts",
+		"demo/src/document.client.ts",
+		"demo/src/document.scss",
+		"demo/src/routes/*.scss",
+		"demo/src/types/**/*.d.ts",
+	],
+	"workspaces": {
+		".": {
+			"entry": [
+				"e2e/**/*.{ts,mjs}",
+				"playwright.config.ts",
+				"typedoc.json",
+				"local-ci.sh",
+				".github/workflows/*.{yml,yaml}",
+			],
+			"project": ["e2e/**/*.{ts,mjs}", "*.{ts,js,json,jsonc}"],
+		},
+		"demo": {
+			"entry": [
+				"vite.config.ts",
+				"vite.common.ts",
+				"src/document.tsx",
+				"src/routes/**/*.{ts,tsx}",
+			],
+			"project": [
+				"src/**/*.{ts,tsx,scss,css,d.ts}",
+				"vite*.ts",
+				"vite/**/*.ts",
+				"package.json",
+			],
+		},
+		"packages/core": {
+			"entry": [
+				"src/index.ts",
+				"src/**/*.el.tsx",
+				"src/test/**/*.test.ts",
+				"test-d/**/*.ts",
+				"wea.config.jsonc",
+				"tsconfig.json",
+			],
+			"project": [
+				"src/**/*.{ts,tsx,scss,css,d.ts}",
+				"test-d/**/*.{ts,tsx,d.ts}",
+				"types/**/*.d.ts",
+				"package.json",
+			],
+		},
+		"packages/webawesome": {
+			"entry": [
+				"src/index.ts",
+				"src/**/*.el.tsx",
+				"src/demo-nodes/**/*.ts",
+				"src/test/**/*.test.ts",
+				"wea.config.jsonc",
+				"tsconfig.json",
+			],
+			"project": ["src/**/*.{ts,tsx,scss,css,d.ts}", "package.json"],
+		},
+	},
+	"ignoreDependencies": [
+		"clsx",
+		"web-elements-analyzer",
+		"@lit/ts-transformers",
+		"typedoc-plugin-markdown",
+	],
+	"ignoreBinaries": ["cpio", "netlify"],
+	"ignoreUnresolved": [],
+}

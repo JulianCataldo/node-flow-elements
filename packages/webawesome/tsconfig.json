@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "experimentalDecorators": false,
+    "useDefineForClassFields": true,
+    "module": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "jsx": "react-native",
+    "jsxImportSource": "jsx-forge",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "plugins": [
+      {
+        "transform": "jsx-forge/transform",
+        "defaultHtmlFlavor": "signal"
+      },
+      {
+        "transform": "@lit/ts-transformers",
+        "import": "idiomaticDecoratorsTransformer"
+      }
+    ],
+    "types": ["node", "./src/_ambient/web-elements.d.ts"]
+  },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}

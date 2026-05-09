@@ -1,0 +1,19 @@
+:host {
+	display: contents;
+	pointer-events: none;
+}
+
+.center {
+	/* font-size: 120px; */
+	color: var(--wa-color-text-quiet);
+	opacity: 0.1;
+
+	wa-icon {
+		width: 128px;
+		height: 128px;
+		font-size: 128px;
+	}
+
+	/* FIXME: */
+	transform: translate(calc(var(--x) - 64px), calc(var(--y) - 64px));
+}
