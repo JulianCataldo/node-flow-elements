@@ -1,6 +1,6 @@
 {
   "name": "@node-flow-elements/webawesome",
-  "version": "0.0.0",
+  "version": "0.1.0-next.0",
   "type": "module",
   "exports": {
     ".": "./dist/index.js",
