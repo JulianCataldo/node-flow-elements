@@ -37,9 +37,9 @@
     "release:dry": "lerna publish from-package --dry-run --yes",
     "sherif": "sherif",
     "test:e2e": "playwright test -c playwright.config.ts",
-    "test:types": "pnpm --filter @node-flow-elements/core test:types",
-    "test:unit": "pnpm --filter @node-flow-elements/core test:unit && pnpm --filter @node-flow-elements/webawesome test:unit",
-    "wea:generate": "turbo run wea-generate --filter=@node-flow-elements/core --filter=@node-flow-elements/webawesome"
+    "test:types": "turbo run test:types",
+    "test:unit": "turbo run test:unit",
+    "wea:generate": "turbo run wea:generate"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",

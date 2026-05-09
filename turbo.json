@@ -19,8 +19,8 @@
       "cache": false,
       "persistent": true
     },
+    "test:types": {},
     "test:unit": {
-      "dependsOn": ["build"],
       "outputs": ["coverage/**"]
     },
     "test:e2e": {

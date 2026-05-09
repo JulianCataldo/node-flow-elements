@@ -25,7 +25,8 @@
   },
   "files": [
     "dist/",
-    "!dist/test"
+    "!dist/test",
+    "test-d/"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
