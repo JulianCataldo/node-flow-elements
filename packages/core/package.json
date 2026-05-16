@@ -26,7 +26,8 @@
   "files": [
     "dist/",
     "!dist/test",
-    "test-d/"
+    "test-d/",
+    "src"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -38,7 +39,8 @@
     "test:e2e": "playwright test -c ../../playwright.config.ts",
     "test:e2e:dev": "playwright test -c ../../playwright.config.ts --ui",
     "test:e2e:headed": "playwright test -c ../../playwright.config.ts --headed",
-    "test:types": "tsd -t test-d/index.test-entry.ts -f 'test-d/**/*.test-d.ts'",
+    "test:types": "tstyche",
+    "test:types:watch": "tstyche --watch",
     "test:unit": "c8 --reporter=html node --test 'dist/test/**/*.test.js'",
     "wea:generate": "wea-generate"
   },
@@ -57,7 +59,7 @@
     "c8": "^10.1.3",
     "jsx-forge": "0.4.0-next.1",
     "ts-patch": "^3.3.0",
-    "tsd": "^0.33.0",
+    "tstyche": "^7.1.0",
     "web-elements-analyzer": "0.0.0"
   },
   "peerDependencies": {
@@ -79,32 +81,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "customElements": "custom-elements.json",
-  "tsd": {
-    "compilerOptions": {
-      "baseUrl": "../..",
-      "jsx": "react-native",
-      "jsxImportSource": "jsx-forge",
-      "skipLibCheck": true,
-      "strict": true,
-      "target": "ES2022",
-      "module": "preserve",
-      "moduleResolution": "bundler",
-      "paths": {
-        "jsx-forge/jsx-runtime": [
-          "packages/core/test-d/shims/jsx-forge-jsx-runtime.d.ts"
-        ]
-      },
-      "types": [
-        "node",
-        "packages/core/src/_ambient/css-modules.d.ts",
-        "packages/core/src/_ambient/web-elements.d.ts"
-      ],
-      "lib": [
-        "ES2022",
-        "DOM",
-        "DOM.Iterable"
-      ]
-    }
-  }
+  "customElements": "custom-elements.json"
 }

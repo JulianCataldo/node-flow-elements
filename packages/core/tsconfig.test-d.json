@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "rootDir": ".",
+    "paths": {
+      "jsx-forge/jsx-runtime": ["./test-d/shims/jsx-forge-jsx-runtime.d.ts"]
+    },
+    "types": [
+      "node",
+      "./src/_ambient/css-modules.d.ts",
+      "./src/_ambient/web-elements.d.ts"
+    ]
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./test-d/**/*.ts"],
+  "exclude": []
+}
